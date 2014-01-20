@@ -3,15 +3,15 @@ from setuptools import setup, find_packages
 import django_delegation
 
 setup(
-    name = "cl_payments",
+    name = "django-delegation",
     version = django_delegation.__version__,
     url = 'http://github.com/vikingco/django-delegation',
     license = 'mit',
-    description = "City Live Payments",
+    description = "Django Delegation",
     long_description = open('README.md','r').read(),
     author = 'Jef Geskens, VikingCo NV',
     packages = find_packages(),
-    package_data = {'cl_payments': [
+    package_data = {'django_delegation': [
                     'templates/*.html', 'templates/*/*.html', 'templates/*/*/*.html'
                 ],},
     zip_safe=False, # Don't create egg files, Django cannot find templates in egg files.
