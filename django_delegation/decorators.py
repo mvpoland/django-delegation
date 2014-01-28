@@ -11,7 +11,7 @@ except:
     now = datetime.datetime.now
 
 
-from .utils import SimpleHTTPRequest, store_delegated_view, execute_delegated_view
+from .utils import SimpleHTTPRequest, store_delegated_view
 from .tasks import handle_delegated_view
 
 

@@ -69,7 +69,7 @@ def store_delegated_view(view_func, request, args, kwargs):
 
 
 def execute_delegated_view(dg_obj):
-    request, args, kwargs, view_module, view_name = pickle.loads(dg_obj.pickled_request)
+    request, args, kwargs, view_module, view_name = pickle.loads(str(dg_obj.pickled_request))
     view_func = getattr(__import__(view_module, {}, {}, ['']), view_name)
     response = view_func(request, *args, **kwargs)
 
