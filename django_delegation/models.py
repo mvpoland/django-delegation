@@ -1,4 +1,4 @@
-from django.contrib.auth.models import User
+from django.conf import settings
 from django.db import models
 
 try:
@@ -10,7 +10,7 @@ except:
 
 class DelegatedView(models.Model):
     url = models.CharField(max_length=255)
-    owner = models.ForeignKey(User, blank=True, null=True)
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL, blank=True, null=True)
 
     created = models.DateTimeField(default=now)
     finished = models.DateTimeField(blank=True, null=True)
